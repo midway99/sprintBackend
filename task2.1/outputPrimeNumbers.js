@@ -1,7 +1,8 @@
-const NUMBERS = 1000;
+const NUMBER_START = 2;
+const NUMBER_END = 1000;
 const outputPrimeNumbers = () => {
     nextPrime:
-        for (let i = 2; i <= NUMBERS; i++) {
+        for (let i = NUMBER_START; i <= NUMBER_END; i++) {
             for (let j = 2; j < i; j++) {
                 if (i % j === 0) continue nextPrime
             }
