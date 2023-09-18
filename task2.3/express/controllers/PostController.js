@@ -51,7 +51,7 @@ module.exports = {
 
             await item.save();
 
-            res.json({status: 'success', book: item})
+            res.json({status: 'success', post: item})
         } catch (e) {
             errorsHandler.handle(e, res);
         }
@@ -59,7 +59,7 @@ module.exports = {
     async remove(req, res) {
         try {
             const post = await Post.findByPk(req.params.id);
-            await Post.destroy();
+            await post.destroy();
 
             res.json({status: 'ok'});
         } catch (e) {
